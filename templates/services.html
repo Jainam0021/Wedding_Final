@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services | Parampara Wedding Planner</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Quintessential&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/static/css/services.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{{ url_for('static', filename='images/favicon.ico') }}"
+    />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="#" class="logo">
+          <img src="/static/images/logo.png" alt="Logo" />
+        </a>
+        <div class="menu-toggle" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="{{ url_for('index') }}">Home</a></li>
+          <li><a href="{{ url_for('about') }}">About</a></li>
+          <li><a href="{{ url_for('services') }}">Service</a></li>
+          <li><a href="{{ url_for('gallery') }}" class="active">Gallery</a></li>
+          <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content Here -->
+    <!-- Services Page Content -->
+    <main class="services-page">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="hero-content">
+          <h1 class="hero-title">Our Wedding Services</h1>
+          <p class="hero-subtitle">
+            Crafting timeless celebrations where tradition meets elegance, and
+            every detail tells your unique love story
+          </p>
+          <div class="hero-ornament"></div>
+        </div>
+      </section>
+
+      <!-- Signature Services Timeline -->
+      <section class="services-timeline">
+        <div class="timeline-header">
+          <h2 class="section-title">Signature Services</h2>
+          <p class="section-subtitle">
+            Comprehensive planning from vision to celebration
+          </p>
+        </div>
+
+        <div class="timeline-container">
+          <!-- Service 1 -->
+          <article class="timeline-item" data-service="1">
+            <div class="timeline-marker"></div>
+            <div class="service-content left">
+              <div class="service-number">01</div>
+              <h3 class="service-title">Venue Selection</h3>
+              <p class="service-description">
+                From grand palace weddings to intimate garden ceremonies, we
+                curate the perfect backdrop for your celebration. Our extensive
+                network across India ensures you find a venue that resonates
+                with your vision and accommodates your guests with elegance.
+              </p>
+            </div>
+          </article>
+
+          <!-- Service 2 -->
+          <article class="timeline-item" data-service="2">
+            <div class="timeline-marker"></div>
+            <div class="service-content right">
+              <div class="service-number">02</div>
+              <h3 class="service-title">Wedding Concepts Design & Décor</h3>
+              <p class="service-description">
+                Transform your wedding into a visual masterpiece with our
+                bespoke décor services. From traditional mandap designs to
+                contemporary floral installations, we blend cultural richness
+                with modern aesthetics to create unforgettable ambiance.
+              </p>
+            </div>
+          </article>
+
+          <!-- Service 3 -->
+          <article class="timeline-item" data-service="3">
+            <div class="timeline-marker"></div>
+            <div class="service-content left">
+              <div class="service-number">03</div>
+              <h3 class="service-title">Vendor Management</h3>
+              <p class="service-description">
+                Access our curated network of trusted photographers, caterers,
+                makeup artists, and entertainment professionals. We negotiate,
+                coordinate, and supervise every vendor to ensure seamless
+                execution and exceptional quality throughout your wedding
+                journey.
+              </p>
+            </div>
+          </article>
+
+          <!-- Service 4 -->
+          <article class="timeline-item" data-service="4">
+            <div class="timeline-marker"></div>
+            <div class="service-content right">
+              <div class="service-number">04</div>
+              <h3 class="service-title">Pre-Wedding Planning</h3>
+              <p class="service-description">
+                Every great wedding begins with meticulous preparation. We
+                orchestrate sangeet, mehendi, haldi ceremonies, and engagement
+                celebrations with the same dedication as your main event,
+                ensuring each ritual is executed with cultural authenticity and
+                personal flair.
+              </p>
+            </div>
+          </article>
+
+          <!-- Service 5 -->
+          <article class="timeline-item" data-service="5">
+            <div class="timeline-marker"></div>
+            <div class="service-content left">
+              <div class="service-number">05</div>
+              <h3 class="service-title">Destination Wedding Planning</h3>
+              <p class="service-description">
+                Whether it's the beaches of Goa, palaces of Rajasthan, or exotic
+                international locations, we handle every aspect of your
+                destination celebration. From travel logistics to local vendor
+                coordination, we ensure your dream destination wedding unfolds
+                flawlessly.
+              </p>
+            </div>
+          </article>
+
+          <!-- Service 6 -->
+          <article class="timeline-item" data-service="6">
+            <div class="timeline-marker"></div>
+            <div class="service-content right">
+              <div class="service-number">06</div>
+              <h3 class="service-title">Artist Management & Entertainment</h3>
+              <p class="service-description">
+                Elevate your celebration with world-class entertainment. We book
+                renowned musicians, DJs, dance troupes, and celebrity performers
+                while managing their technical requirements, ensuring your
+                guests experience entertainment that matches your wedding's
+                grandeur.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Experience Services Split Section -->
+      <section class="experience-services">
+        <div class="split-container">
+          <article class="split-service split-left" data-split="left">
+            <div class="split-content">
+              <div class="service-icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <h3 class="split-title">Guest Management & RSVP</h3>
+              <p class="split-description">
+                Managing hundreds of guests requires precision and care. We
+                handle invitations, RSVPs, accommodation arrangements, and guest
+                welcome services, ensuring every attendee feels valued and
+                informed throughout your celebration.
+              </p>
+            </div>
+          </article>
+
+          <div class="split-divider"></div>
+
+          <article class="split-service split-right" data-split="right">
+            <div class="split-content">
+              <div class="service-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <h3 class="split-title">Wedding Financial Planning</h3>
+              <p class="split-description">
+                Navigate your wedding budget with confidence. Our transparent
+                financial planning services help you allocate resources wisely,
+                track expenses in real-time, and make informed decisions that
+                deliver maximum value without compromising on quality.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <article class="full-width-service" data-full="center">
+          <div class="full-content">
+            <div class="service-icon">
+              <i class="fas fa-truck"></i>
+            </div>
+            <h3 class="full-title">Logistics Management</h3>
+            <p class="full-description">
+              From equipment transport to guest shuttles, from setup
+              coordination to breakdown management, we orchestrate every
+              logistical detail. Our experienced team ensures smooth operations
+              behind the scenes, allowing you to remain fully present in your
+              celebration.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <!-- Culinary & Celebration Services -->
+      <section class="celebration-services">
+        <div class="celebration-grid">
+          <article class="celebration-card" data-card="1">
+            <div class="card-overlay"></div>
+            <div class="card-content">
+              <div class="card-number">07</div>
+              <h3 class="card-title">Food & Beverages Services</h3>
+              <p class="card-description">
+                Delight your guests with culinary excellence. We curate
+                multi-cuisine menus honoring traditional recipes while
+                incorporating contemporary presentations, accommodating dietary
+                preferences, and ensuring impeccable service throughout your
+                events.
+              </p>
+            </div>
+          </article>
+
+          <article class="celebration-card" data-card="2">
+            <div class="card-overlay"></div>
+            <div class="card-content">
+              <div class="card-number">08</div>
+              <h3 class="card-title">Gifting Services</h3>
+              <p class="card-description">
+                Express gratitude with thoughtfully curated wedding favors and
+                guest gifts. From traditional return gifts to personalized
+                tokens, we source, design, and package presents that leave
+                lasting impressions and reflect your appreciation.
+              </p>
+            </div>
+          </article>
+
+          <article class="celebration-card" data-card="3">
+            <div class="card-overlay"></div>
+            <div class="card-content">
+              <div class="card-number">09</div>
+              <h3 class="card-title">Wedding Day Management</h3>
+              <p class="card-description">
+                On your special day, we become your invisible support system.
+                Our team coordinates every moment—from ceremony timing to
+                reception flow—ensuring seamless transitions, managing
+                unexpected situations, and allowing you to immerse yourself in
+                the joy of your wedding.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Why Choose Us -->
+      <section class="why-different">
+        <div class="why-content">
+          <h2 class="why-title">Why Our Services Are Different</h2>
+          <div class="why-features">
+            <div class="feature-item" data-feature="1">
+              <div class="feature-icon">✦</div>
+              <h4>Cultural Sensitivity</h4>
+              <p>
+                Deep understanding of Indian wedding traditions, regional
+                customs, and family values guides every decision we make
+              </p>
+            </div>
+            <div class="feature-item" data-feature="2">
+              <div class="feature-icon">✦</div>
+              <h4>Personalized Execution</h4>
+              <p>
+                No two weddings are alike. We craft experiences that
+                authentically reflect your personality, love story, and family
+                heritage
+              </p>
+            </div>
+            <div class="feature-item" data-feature="3">
+              <div class="feature-icon">✦</div>
+              <h4>End-to-End Ownership</h4>
+              <p>
+                From the first consultation to the final farewell, we remain
+                your dedicated partners, ensuring consistency and quality at
+                every stage
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Closing Section -->
+      <section class="closing-section">
+        <div class="closing-content">
+          <p class="closing-text">
+            "Every detail matters when tradition meets celebration."
+          </p>
+          <div class="closing-ornament"></div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>About Us</h3>
+          <p>
+            We are dedicated to providing excellent service and creating
+            memorable experiences for our clients.
+          </p>
+          <div class="social-links">
+            <a
+              href="https://www.instagram.com/parampara_wedding_planner_?igsh=cHQ5aGhhZnllb2pk"
+              title="Instagram"
+              aria-label="Instagram"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a
+              href="https://wa.me/9510560421"
+              title="WhatsApp"
+              aria-label="WhatsApp"
+            >
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('services') }}">Service</a></li>
+            <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+          <ul class="footer-links">
+            <li>
+              <a href="mailto:paramparaweddingplanner@gmail.com"
+                >paramparaweddingplanner@gmail.com</a
+              >
+            </li>
+            <li><a href="tel:+919510560421">+91 95105 60421</a></li>
+            <li><a href="tel:+917041203684">+91 70412 03684</a></li>
+            <li>
+              402, 4th floor, Atlantis Enclave , Gurukul Rd,, Ahmedabad, India
+              380 052
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2022 Parampara Wedding Planner. All rights reserved.</p>
+        <a href="https://webvibestudios-gzc8.onrender.com/"
+          ><p>Crafted By WebVibe Studios 🤍</p></a
+        >
+      </div>
+    </footer>
+
+    <script src="/static/js/services.js"></script>
+    <script>
+      function toggleMenu() {
+        const navLinks = document.getElementById("navLinks");
+        navLinks.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>

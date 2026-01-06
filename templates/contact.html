@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Parampara Weddings Planner</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Quintessential&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/static/css/contact.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{{ url_for('static', filename='images/favicon.ico') }}"
+    />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="#" class="logo">
+          <img src="/static/images/logo.png" alt="Logo" />
+        </a>
+        <div class="menu-toggle" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="{{ url_for('index') }}">Home</a></li>
+          <li><a href="{{ url_for('about') }}">About</a></li>
+          <li><a href="{{ url_for('services') }}">Service</a></li>
+          <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+          <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content Here -->
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+      <div class="contact-container">
+        <div class="contact-header">
+          <h1 class="contact-title">Let's Plan Your Special Day</h1>
+          <p class="contact-subtitle">
+            Share your details and we'll get back to you shortly
+          </p>
+        </div>
+
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullName"
+                >Full Name <span class="required">*</span></label
+              >
+              <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                placeholder="Enter your full name"
+                required
+              />
+              <span class="error-message" id="fullNameError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="phone"
+                >Phone Number <span class="required">*</span></label
+              >
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Enter your phone number"
+                required
+              />
+              <span class="error-message" id="phoneError"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email (optional)"
+              />
+              <span class="error-message" id="emailError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="eventDate">Event Date</label>
+              <input type="date" id="eventDate" name="eventDate" />
+              <span class="error-message" id="eventDateError"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="eventCity"
+                >Event City <span class="required">*</span></label
+              >
+              <input
+                type="text"
+                id="eventCity"
+                name="eventCity"
+                placeholder="Enter event city"
+                required
+              />
+              <span class="error-message" id="eventCityError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="eventType"
+                >Type of Event <span class="required">*</span></label
+              >
+              <select id="eventType" name="eventType" required>
+                <option value="">Select event type</option>
+                <option value="wedding">Wedding</option>
+                <option value="reception">Reception</option>
+                <option value="engagement">Engagement</option>
+                <option value="haldi">Haldi</option>
+                <option value="mehendi">Mehendi</option>
+                <option value="destination">Destination Wedding</option>
+              </select>
+              <span class="error-message" id="eventTypeError"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="guestCount"
+                >Number of Guests <span class="required">*</span></label
+              >
+              <select id="guestCount" name="guestCount" required>
+                <option value="">Select guest count</option>
+                <option value="below-100">Below 100</option>
+                <option value="100-300">100–300</option>
+                <option value="300-500">300–500</option>
+                <option value="500+">500+</option>
+              </select>
+              <span class="error-message" id="guestCountError"></span>
+            </div>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="description">Description</label>
+            <textarea
+              id="description"
+              name="description"
+              rows="5"
+              placeholder="Tell us about your event, theme, or special requirements"
+            ></textarea>
+            <span class="error-message" id="descriptionError"></span>
+          </div>
+
+          <button type="submit" class="submit-btn">
+            Book Free Consultation
+          </button>
+
+          <div class="success-message" id="successMessage">
+            <i class="fa-solid fa-circle-check"></i>
+            <p>
+              Thank you! We've received your details and will get back to you
+              shortly.
+            </p>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>About Us</h3>
+          <p>
+            We are dedicated to providing excellent service and creating
+            memorable experiences for our clients.
+          </p>
+          <div class="social-links">
+            <a
+              href="https://www.instagram.com/parampara_wedding_planner_?igsh=cHQ5aGhhZnllb2pk"
+              title="Instagram"
+              aria-label="Instagram"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a
+              href="https://wa.me/9510560421"
+              title="WhatsApp"
+              aria-label="WhatsApp"
+            >
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('services') }}">Service</a></li>
+            <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+          <ul class="footer-links">
+            <li>
+              <a href="mailto:paramparaweddingplanner@gmail.com"
+                >paramparaweddingplanner@gmail.com</a
+              >
+            </li>
+            <li><a href="tel:+919510560421">+91 95105 60421</a></li>
+            <li><a href="tel:+917041203684">+91 70412 03684</a></li>
+            <li>
+              402, 4th floor, Atlantis Enclave , Gurukul Rd,, Ahmedabad, India
+              380 052
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2022 Parampara Wedding Planner. All rights reserved.</p>
+        <a href="https://webvibestudios-gzc8.onrender.com/"
+          ><p>Crafted By WebVibe Studios 🤍</p></a
+        >
+      </div>
+    </footer>
+
+    <script src="/static/js/contact.js"></script>
+    <script>
+      function toggleMenu() {
+        const navLinks = document.getElementById("navLinks");
+        navLinks.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>

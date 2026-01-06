@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Discover Parampara Wedding Planner - where tradition meets celebration. Learn about our story, mission, values, and dedicated team committed to creating unforgettable Indian wedding experiences."
+    />
+    <meta
+      name="keywords"
+      content="Indian wedding planner, traditional weddings, wedding planning services, cultural celebrations, Ahmedabad wedding planner"
+    />
+    <title>
+      About Us - Parampara Wedding Planner | Traditional Indian Wedding Planning
+    </title>
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Quintessential&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/static/css/about.css" />
+
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{{ url_for('static', filename='images/favicon.ico') }}"
+    />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="#" class="logo">
+          <img
+            src="/static/images/logo.png"
+            alt="Parampara Wedding Planner Logo"
+          />
+        </a>
+        <div class="menu-toggle" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="{{ url_for('index') }}">Home</a></li>
+          <li><a href="{{ url_for('about') }}">About</a></li>
+          <li><a href="{{ url_for('services') }}">Service</a></li>
+          <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+          <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="about-page">
+      <!-- Section 1: Who We Are -->
+      <section class="who-we-are animate-section" id="who-we-are">
+        <div class="container">
+          <div class="section-header">
+            <h1>Who We Are</h1>
+            <div class="decorative-line"></div>
+          </div>
+          <div class="content-wrapper">
+            <p class="intro-text">
+              Parampara Wedding Planner is your trusted companion in celebrating
+              life's most precious moments with grace, tradition, and
+              authenticity. We are storytellers of culture, architects of
+              memories, and guardians of timeless Indian wedding traditions.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Our Story -->
+      <section class="our-story animate-section" id="our-story">
+        <div class="container">
+          <div class="section-header">
+            <h2>Our Story</h2>
+            <div class="decorative-line"></div>
+          </div>
+          <div class="story-content">
+            <div class="story-text">
+              <p>
+                Parampara, meaning "tradition" in Sanskrit, was born from a
+                profound respect for the rich cultural heritage that defines
+                Indian weddings. Our journey began with a simple yet powerful
+                vision: to preserve and celebrate the sacred rituals and customs
+                that have been passed down through generations.
+              </p>
+              <p>
+                Founded by passionate individuals who witnessed the beauty of
+                traditional ceremonies blending with contemporary celebrations,
+                we recognized the need for wedding planners who truly understand
+                the soul of Indian culture. Each ceremony holds deep
+                significance, every ritual tells a story, and we are honored to
+                be the custodians of these precious moments.
+              </p>
+              <p>
+                Today, Parampara stands as a bridge between ancestral wisdom and
+                modern elegance, ensuring that your wedding day honors both your
+                roots and your dreams.
+              </p>
+            </div>
+            <div class="story-image">
+              <img
+                src="/static/images/teamphoto.jpeg"
+                alt="Parampara Wedding Traditions and Cultural Heritage"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Mission & Vision -->
+      <section class="mission-vision animate-section" id="mission-vision">
+        <div class="container">
+          <div class="section-header">
+            <h2>Mission & Vision</h2>
+            <div class="decorative-line"></div>
+          </div>
+          <div class="mv-grid">
+            <article class="mv-card">
+              <div class="mv-icon">
+                <i class="fas fa-bullseye"></i>
+              </div>
+              <h3>Our Mission</h3>
+              <p>
+                To craft exceptional wedding experiences that honor cultural
+                traditions while embracing individual dreams. We are committed
+                to delivering flawless celebrations where every detail reflects
+                authenticity, elegance, and the unique love story of each
+                couple.
+              </p>
+            </article>
+            <article class="mv-card">
+              <div class="mv-icon">
+                <i class="fas fa-eye"></i>
+              </div>
+              <h3>Our Vision</h3>
+              <p>
+                To be recognized as the most trusted name in traditional Indian
+                wedding planning, setting the standard for cultural celebrations
+                that inspire, unite families, and create legacies that transcend
+                generations.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Cultural Values -->
+      <section class="cultural-values animate-section" id="cultural-values">
+        <div class="container">
+          <div class="section-header">
+            <h2>Cultural Values</h2>
+            <div class="decorative-line"></div>
+          </div>
+          <div class="values-grid">
+            <article class="value-card">
+              <div class="value-icon">
+                <i class="fas fa-hands-praying"></i>
+              </div>
+              <h3>Respect for Tradition</h3>
+              <p>Honoring ancestral customs with reverence and authenticity</p>
+            </article>
+            <article class="value-card">
+              <div class="value-icon">
+                <i class="fas fa-heart"></i>
+              </div>
+              <h3>Devotion to Excellence</h3>
+              <p>Pursuing perfection in every detail and celebration</p>
+            </article>
+            <article class="value-card">
+              <div class="value-icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <h3>Family Unity</h3>
+              <p>Bringing families together in harmony and celebration</p>
+            </article>
+            <article class="value-card">
+              <div class="value-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h3>Trust & Integrity</h3>
+              <p>
+                Building lasting relationships through honesty and reliability
+              </p>
+            </article>
+            <article class="value-card">
+              <div class="value-icon">
+                <i class="fas fa-gem"></i>
+              </div>
+              <h3>Cultural Authenticity</h3>
+              <p>Preserving genuine traditions in every ceremony</p>
+            </article>
+            <article class="value-card">
+              <div class="value-icon">
+                <i class="fas fa-star"></i>
+              </div>
+              <h3>Personalized Care</h3>
+              <p>Tailoring each celebration to reflect your unique story</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: Our Team -->
+      <section class="our-team animate-section" id="our-team">
+        <div class="container">
+          <div class="section-header">
+            <h2>Our Team</h2>
+            <div class="decorative-line"></div>
+          </div>
+          <div class="team-grid">
+            <article class="team-card">
+              <div class="team-image">
+                <i>BP</i>
+              </div>
+              <div class="team-info">
+                <h3>Bhavy Panchal</h3>
+                <p class="role">Co-Founder</p>
+                <p class="experience">
+                  5+ years experience in traditional wedding ceremonies
+                </p>
+              </div>
+            </article>
+            <article class="team-card">
+              <div class="team-image">
+                <i>JP</i>
+              </div>
+              <div class="team-info">
+                <h3>Joyal Patel</h3>
+                <p class="role">Co-Founder</p>
+                <p class="experience">
+                  5+ years expertise in cultural event coordination
+                </p>
+              </div>
+            </article>
+            <article class="team-card">
+              <div class="team-image">
+                <i>KP</i>
+              </div>
+              <div class="team-info">
+                <h3>Krish Patel</h3>
+                <p class="role">Co-Founder</p>
+                <p class="experience">
+                  5+ years in creating memorable celebrations
+                </p>
+              </div>
+            </article>
+            <article class="team-card">
+              <div class="team-image">
+                <i>VP</i>
+              </div>
+              <div class="team-info">
+                <h3>Vishv Patel</h3>
+                <p class="role">Co-Founder</p>
+                <p class="experience">
+                  5+ years preserving authentic traditions
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6: Why We Exist -->
+      <section class="why-we-exist animate-section" id="why-we-exist">
+        <div class="container">
+          <div class="section-header">
+            <h2>Why We Exist</h2>
+            <div class="decorative-line"></div>
+          </div>
+          <div class="purpose-content">
+            <p class="purpose-text">
+              We exist because weddings are more than events—they are sacred
+              bonds that unite souls, families, and generations. In a rapidly
+              changing world, we believe in preserving the essence of tradition
+              while celebrating the joy of new beginnings. Every couple deserves
+              a wedding that honors their heritage, reflects their values, and
+              creates memories that will be cherished for lifetimes to come.
+              This is our calling, our passion, and our promise to you.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7: Closing Statement -->
+      <section class="closing-statement animate-section" id="closing-statement">
+        <div class="container">
+          <div class="closing-content">
+            <blockquote class="closing-quote">
+              "In every ceremony we craft, in every tradition we honor, and in
+              every smile we create, we find our purpose. Your wedding is not
+              just our work—it is our privilege, our art, and our legacy."
+            </blockquote>
+            <p class="closing-cta">Let us be part of your beautiful journey</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>About Us</h3>
+          <p>
+            We are dedicated to providing excellent service and creating
+            memorable experiences for our clients.
+          </p>
+          <div class="social-links">
+            <a
+              href="https://www.instagram.com/parampara_wedding_planner_?igsh=cHQ5aGhhZnllb2pk"
+              title="Instagram"
+              aria-label="Instagram"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a
+              href="https://wa.me/9510560421"
+              title="WhatsApp"
+              aria-label="WhatsApp"
+            >
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('services') }}">Service</a></li>
+            <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+          <ul class="footer-links">
+            <li>
+              <a href="mailto:paramparaweddingplanner@gmail.com"
+                >paramparaweddingplanner@gmail.com</a
+              >
+            </li>
+            <li><a href="tel:+919510560421">+91 95105 60421</a></li>
+            <li><a href="tel:+917041203684">+91 70412 03684</a></li>
+            <li>
+              402, 4th floor, Atlantis Enclave, Gurukul Rd, Ahmedabad, India 380
+              052
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2022 Parampara Wedding Planner. All rights reserved.</p>
+        <a href="https://webvibestudios-gzc8.onrender.com/"
+          ><p>Crafted By WebVibe Studios 🤍</p></a
+        >
+      </div>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        const navLinks = document.getElementById("navLinks");
+        navLinks.classList.toggle("active");
+      }
+    </script>
+    <script>
+      /**
+       * About Page JavaScript
+       * Handles scroll-based animations and section reveal effects
+       * Uses Intersection Observer API for performance
+       */
+
+      // ============================================
+      // SCROLL ANIMATION FUNCTIONALITY
+      // ============================================
+
+      /**
+       * Initialize Intersection Observer for scroll animations
+       * Observes when sections enter the viewport and adds 'visible' class
+       */
+      function initScrollAnimations() {
+        // Select all sections that need animation
+        const animatedSections = document.querySelectorAll(".animate-section");
+
+        // Check if Intersection Observer is supported
+        if (!("IntersectionObserver" in window)) {
+          // Fallback: show all sections immediately if not supported
+          animatedSections.forEach((section) => {
+            section.classList.add("visible");
+          });
+          return;
+        }
+
+        // Configure the observer options
+        const observerOptions = {
+          root: null, // Use viewport as root
+          rootMargin: "0px 0px -100px 0px", // Trigger slightly before element enters viewport
+          threshold: 0.15, // Trigger when 15% of element is visible
+        };
+
+        // Create the Intersection Observer
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            // When element enters viewport
+            if (entry.isIntersecting) {
+              // Add visible class to trigger animation
+              entry.target.classList.add("visible");
+
+              // Optional: Stop observing once animated (performance optimization)
+              observer.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+
+        // Observe each animated section
+        animatedSections.forEach((section) => {
+          observer.observe(section);
+        });
+      }
+
+      // ============================================
+      // SMOOTH SCROLL FOR ANCHOR LINKS
+      // ============================================
+
+      /**
+       * Enable smooth scrolling for internal anchor links
+       */
+      function initSmoothScroll() {
+        // Select all anchor links pointing to internal sections
+        const anchorLinks = document.querySelectorAll('a[href^="#"]');
+
+        anchorLinks.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            const targetId = this.getAttribute("href");
+
+            // Skip if it's just '#' (no target)
+            if (targetId === "#") return;
+
+            const targetSection = document.querySelector(targetId);
+
+            // If target section exists, smooth scroll to it
+            if (targetSection) {
+              e.preventDefault();
+
+              // Get navbar height for offset calculation
+              const navbar = document.querySelector(".navbar");
+              const navbarHeight = navbar ? navbar.offsetHeight : 0;
+
+              // Calculate scroll position
+              const targetPosition =
+                targetSection.offsetTop - navbarHeight - 20;
+
+              // Smooth scroll
+              window.scrollTo({
+                top: targetPosition,
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+      }
+
+      // ============================================
+      // HOVER EFFECTS ENHANCEMENT
+      // ============================================
+
+      /**
+       * Add subtle hover effects to cards
+       */
+      function enhanceCardHoverEffects() {
+        const cards = document.querySelectorAll(
+          ".mv-card, .value-card, .team-card"
+        );
+
+        cards.forEach((card) => {
+          card.addEventListener("mouseenter", function () {
+            this.style.transition = "transform 0.3s ease, box-shadow 0.3s ease";
+          });
+
+          card.addEventListener("mouseleave", function () {
+            this.style.transition = "transform 0.3s ease, box-shadow 0.3s ease";
+          });
+        });
+      }
+
+      // ============================================
+      // PERFORMANCE OPTIMIZATION
+      // ============================================
+
+      /**
+       * Debounce function to limit function calls during scroll/resize
+       * @param {Function} func - Function to debounce
+       * @param {number} wait - Wait time in milliseconds
+       * @returns {Function} - Debounced function
+       */
+      function debounce(func, wait) {
+        let timeout;
+        return function executedFunction(...args) {
+          const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+          };
+          clearTimeout(timeout);
+          timeout = setTimeout(later, wait);
+        };
+      }
+
+      // ============================================
+      // PAGE LOAD HANDLER
+      // ============================================
+
+      /**
+       * Initialize all functionality when DOM is ready
+       */
+      function initPage() {
+        // Initialize scroll animations
+        initScrollAnimations();
+
+        // Initialize smooth scrolling
+        initSmoothScroll();
+
+        // Enhance card hover effects
+        enhanceCardHoverEffects();
+
+        // Log initialization (remove in production)
+        console.log("About page initialized successfully");
+      }
+
+      // ============================================
+      // EVENT LISTENERS
+      // ============================================
+
+      // Wait for DOM to be fully loaded
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initPage);
+      } else {
+        // DOM is already loaded
+        initPage();
+      }
+
+      // Handle window resize (debounced for performance)
+      window.addEventListener(
+        "resize",
+        debounce(() => {
+          // Recalculate any dynamic measurements if needed
+          console.log("Window resized");
+        }, 250)
+      );
+
+      // ============================================
+      // UTILITY FUNCTIONS
+      // ============================================
+
+      /**
+       * Check if element is in viewport
+       * @param {Element} element - DOM element to check
+       * @returns {boolean} - True if element is in viewport
+       */
+      function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <=
+            (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <=
+            (window.innerWidth || document.documentElement.clientWidth)
+        );
+      }
+
+      /**
+       * Add stagger effect to child elements
+       * Useful for animating multiple items with delay
+       * @param {NodeList} elements - Elements to stagger
+       * @param {number} delay - Delay between each element in ms
+       */
+      function staggerAnimation(elements, delay = 100) {
+        elements.forEach((element, index) => {
+          element.style.transitionDelay = `${index * delay}ms`;
+        });
+      }
+
+      // Export functions if needed for testing or external use
+      if (typeof module !== "undefined" && module.exports) {
+        module.exports = {
+          initScrollAnimations,
+          initSmoothScroll,
+          isInViewport,
+          debounce,
+        };
+      }
+    </script>
+  </body>
+</html>

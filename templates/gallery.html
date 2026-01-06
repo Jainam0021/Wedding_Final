@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore our stunning wedding photography gallery featuring pre-wedding shoots, ceremonies, receptions, and beautiful decor moments captured by Parampara Weddings Planner."
+    />
+    <meta
+      name="keywords"
+      content="wedding gallery, wedding photography, pre-wedding photos, wedding ceremony, reception photos, wedding decor"
+    />
+    <title>Gallery - Parampara Weddings Planner</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Quintessential&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/static/css/gallery.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{{ url_for('static', filename='images/favicon.ico') }}"
+    />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="{{ url_for('index') }}" class="logo">
+          <img
+            src="/static/images/logo.png"
+            alt="Parampara Weddings Planner Logo"
+          />
+        </a>
+        <div class="menu-toggle" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="{{ url_for('index') }}">Home</a></li>
+          <li><a href="{{ url_for('about') }}">About</a></li>
+          <li><a href="{{ url_for('services') }}">Service</a></li>
+          <li><a href="{{ url_for('gallery') }}" class="active">Gallery</a></li>
+          <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="gallery-main">
+      <!-- Hero Section with Parallax -->
+      <section class="hero-gallery" id="heroGallery">
+        <div class="hero-gallery__background">
+          <div class="hero-gallery__gradient"></div>
+          <div class="hero-gallery__particles" id="particlesContainer"></div>
+        </div>
+        <div class="hero-gallery__content">
+          <h1 class="hero-gallery__title">
+            <span class="hero-gallery__title-word">Captured</span>
+            <span class="hero-gallery__title-word">Moments</span>
+          </h1>
+          <p class="hero-gallery__subtitle">
+            Where every frame tells a timeless story
+          </p>
+          <div class="hero-gallery__scroll-indicator">
+            <span class="hero-gallery__scroll-text">Explore</span>
+            <div class="hero-gallery__scroll-line"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Filter Section -->
+      <section class="gallery-filter" id="galleryFilter">
+        <div class="gallery-filter__container">
+          <h2 class="gallery-filter__title">Explore Our Collection</h2>
+          <div class="gallery-filter__controls" role="tablist">
+            <button
+              class="gallery-filter__btn gallery-filter__btn--active"
+              data-filter="all"
+              role="tab"
+              aria-selected="true"
+            >
+              <span class="gallery-filter__btn-text">All</span>
+              <span class="gallery-filter__btn-bg"></span>
+            </button>
+            <button
+              class="gallery-filter__btn"
+              data-filter="pre-wedding"
+              role="tab"
+              aria-selected="false"
+            >
+              <span class="gallery-filter__btn-text">Pre-Wedding</span>
+              <span class="gallery-filter__btn-bg"></span>
+            </button>
+            <button
+              class="gallery-filter__btn"
+              data-filter="ceremony"
+              role="tab"
+              aria-selected="false"
+            >
+              <span class="gallery-filter__btn-text">Ceremony</span>
+              <span class="gallery-filter__btn-bg"></span>
+            </button>
+            <button
+              class="gallery-filter__btn"
+              data-filter="reception"
+              role="tab"
+              aria-selected="false"
+            >
+              <span class="gallery-filter__btn-text">Reception</span>
+              <span class="gallery-filter__btn-bg"></span>
+            </button>
+            <button
+              class="gallery-filter__btn"
+              data-filter="decor"
+              role="tab"
+              aria-selected="false"
+            >
+              <span class="gallery-filter__btn-text">Decor</span>
+              <span class="gallery-filter__btn-bg"></span>
+            </button>
+            <button
+              class="gallery-filter__btn"
+              data-filter="food"
+              role="tab"
+              aria-selected="false"
+            >
+              <span class="gallery-filter__btn-text">Food</span>
+              <span class="gallery-filter__btn-bg"></span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Grid -->
+      <section class="gallery-grid" id="galleryGrid">
+        <div class="gallery-grid__container">
+          <!-- Gallery Item 1 -->
+          <figure
+            class="gallery-item"
+            data-category="pre-wedding"
+            data-index="0"
+          >
+            <div class="gallery-item__wrapper">
+              <div class="gallery-item__placeholder"></div>
+              <img
+                class="gallery-item__img"
+                data-src="/static/images/wedding01.jpg"
+                alt="Pre-wedding photoshoot - Couple in romantic setting"
+                loading="lazy"
+              />
+              <div class="gallery-item__overlay">
+                <div class="gallery-item__overlay-content">
+                  <span class="gallery-item__category">Pre-Wedding</span>
+                  <h3 class="gallery-item__title">Romantic Moments</h3>
+                  <button
+                    class="gallery-item__view-btn"
+                    aria-label="View fullscreen"
+                  >
+                    <i class="fas fa-expand"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </figure>
+
+          <!-- Gallery Item 2 -->
+          <figure
+            class="gallery-item"
+            data-category="pre-wedding"
+            data-index="1"
+          >
+            <div class="gallery-item__wrapper">
+              <div class="gallery-item__placeholder"></div>
+              <img
+                class="gallery-item__img"
+                data-src="/static/images/wedding02.JPG"
+                alt="Pre-wedding photoshoot - Outdoor couple portrait"
+                loading="lazy"
+              />
+              <div class="gallery-item__overlay">
+                <div class="gallery-item__overlay-content">
+                  <span class="gallery-item__category">Pre-Wedding</span>
+                  <h3 class="gallery-item__title">Love Story</h3>
+                  <button
+                    class="gallery-item__view-btn"
+                    aria-label="View fullscreen"
+                  >
+                    <i class="fas fa-expand"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </figure>
+
+          <!-- Gallery Item 3 -->
+          <figure class="gallery-item" data-category="ceremony" data-index="2">
+            <div class="gallery-item__wrapper">
+              <div class="gallery-item__placeholder"></div>
+              <img
+                class="gallery-item__img"
+                data-src="/static/images/ceremony02.JPG"
+                alt="Wedding ceremony - Bride and groom exchanging vows"
+                loading="lazy"
+              />
+              <div class="gallery-item__overlay">
+                <div class="gallery-item__overlay-content">
+                  <span class="gallery-item__category">Ceremony</span>
+                  <h3 class="gallery-item__title">Sacred Vows</h3>
+                  <button
+                    class="gallery-item__view-btn"
+                    aria-label="View fullscreen"
+                  >
+                    <i class="fas fa-expand"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </figure>
+
+          <!-- Gallery Item 4 -->
+          <figure class="gallery-item" data-category="ceremony" data-index="3">
+            <div class="gallery-item__wrapper">
+              <div class="gallery-item__placeholder"></div>
+              <img
+                class="gallery-item__img"
+                data-src="/static/images/ceremony01.jpg"
+                alt="Wedding ceremony - Traditional wedding rituals"
+                loading="lazy"
+              />
+              <div class="gallery-item__overlay">
+                <div class="gallery-item__overlay-content">
+                  <span class="gallery-item__category">Ceremony</span>
+                  <h3 class="gallery-item__title">Divine Union</h3>
+                  <button
+                    class="gallery-item__view-btn"
+                    aria-label="View fullscreen"
+                  >
+                    <i class="fas fa-expand"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </figure>
+
+          <!-- Gallery Item 5 -->
+          <figure class="gallery-item" data-category="reception" data-index="4">
+            <div class="gallery-item__wrapper">
+              <div class="gallery-item__placeholder"></div>
+              <img
+                class="gallery-item__img"
+                data-src="/static/images/reception02.jpg"
+                alt="Wedding reception - Couple's first dance"
+                loading="lazy"
+              />
+              <div class="gallery-item__overlay">
+                <div class="gallery-item__overlay-content">
+                  <span class="gallery-item__category">Reception</span>
+                  <h3 class="gallery-item__title">Celebration Time</h3>
+                  <button
+                    class="gallery-item__view-btn"
+                    aria-label="View fullscreen"
+                  >
+                    <i class="fas fa-expand"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </figure>
+
+          <!-- Gallery Item 6 -->
+          <figure class="gallery-item" data-category="reception" data-index="5">
+            <div class="gallery-item__wrapper">
+              <div class="gallery-item__placeholder"></div>
+              <img
+                class="gallery-item__img"
+                data-src="/static/images/reception01.jpg"
+                alt="Wedding reception - Guests celebrating and dancing"
+                loading="lazy"
+              />
+              <div class="gallery-item__overlay">
+                <div class="gallery-item__overlay-content">
+                  <span class="gallery-item__category">Reception</span>
+                  <h3 class="gallery-item__title">Joyful Evening</h3>
+                  <button
+                    class="gallery-item__view-btn"
+                    aria-label="View fullscreen"
+                  >
+                    <i class="fas fa-expand"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </figure>
+
+          <!-- Gallery Item 7 -->
+          <figure class="gallery-item" data-category="decor" data-index="6">
+            <div class="gallery-item__wrapper">
+              <div class="gallery-item__placeholder"></div>
+              <img
+                class="gallery-item__img"
+                data-src="/static/images/decor.jpg"
+                alt="Wedding decor - Floral arrangements and elegant setup"
+                loading="lazy"
+              />
+              <div class="gallery-item__overlay">
+                <div class="gallery-item__overlay-content">
+                  <span class="gallery-item__category">Decor</span>
+                  <h3 class="gallery-item__title">Floral Paradise</h3>
+                  <button
+                    class="gallery-item__view-btn"
+                    aria-label="View fullscreen"
+                  >
+                    <i class="fas fa-expand"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </figure>
+
+          <!-- Gallery Item 8 -->
+          <figure class="gallery-item" data-category="decor" data-index="7">
+            <div class="gallery-item__wrapper">
+              <div class="gallery-item__placeholder"></div>
+              <img
+                class="gallery-item__img"
+                data-src="/static/images/decor02.jpg"
+                alt="Wedding decor - Stage decoration with lighting"
+                loading="lazy"
+              />
+              <div class="gallery-item__overlay">
+                <div class="gallery-item__overlay-content">
+                  <span class="gallery-item__category">Decor</span>
+                  <h3 class="gallery-item__title">Elegant Setup</h3>
+                  <button
+                    class="gallery-item__view-btn"
+                    aria-label="View fullscreen"
+                  >
+                    <i class="fas fa-expand"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </figure>
+
+          <!-- Gallery Item 9 -->
+          <figure class="gallery-item" data-category="food" data-index="8">
+            <div class="gallery-item__wrapper">
+              <div class="gallery-item__placeholder"></div>
+              <img
+                class="gallery-item__img"
+                data-src="/static/images/food01.jpg"
+                alt="Wedding catering - Gourmet food display"
+                loading="lazy"
+              />
+              <div class="gallery-item__overlay">
+                <div class="gallery-item__overlay-content">
+                  <span class="gallery-item__category">Food</span>
+                  <h3 class="gallery-item__title">Culinary Delights</h3>
+                  <button
+                    class="gallery-item__view-btn"
+                    aria-label="View fullscreen"
+                  >
+                    <i class="fas fa-expand"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </figure>
+
+          <!-- Gallery Item 10 -->
+          <figure class="gallery-item" data-category="food" data-index="9">
+            <div class="gallery-item__wrapper">
+              <div class="gallery-item__placeholder"></div>
+              <img
+                class="gallery-item__img"
+                data-src="/static/images/food02.jpg"
+                alt="Wedding catering - Dessert and sweets table"
+                loading="lazy"
+              />
+              <div class="gallery-item__overlay">
+                <div class="gallery-item__overlay-content">
+                  <span class="gallery-item__category">Food</span>
+                  <h3 class="gallery-item__title">Sweet Treats</h3>
+                  <button
+                    class="gallery-item__view-btn"
+                    aria-label="View fullscreen"
+                  >
+                    <i class="fas fa-expand"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </figure>
+
+          <!-- Gallery Item 11 -->
+          <figure
+            class="gallery-item"
+            data-category="pre-wedding"
+            data-index="10"
+          >
+            <div class="gallery-item__wrapper">
+              <div class="gallery-item__placeholder"></div>
+              <img
+                class="gallery-item__img"
+                data-src="/static/images/wedding03.jpg"
+                alt="Pre-wedding photoshoot - Couple in traditional attire"
+                loading="lazy"
+              />
+              <div class="gallery-item__overlay">
+                <div class="gallery-item__overlay-content">
+                  <span class="gallery-item__category">Pre-Wedding</span>
+                  <h3 class="gallery-item__title">Cultural Blend</h3>
+                  <button
+                    class="gallery-item__view-btn"
+                    aria-label="View fullscreen"
+                  >
+                    <i class="fas fa-expand"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </figure>
+
+          <!-- Gallery Item 12 -->
+          <figure class="gallery-item" data-category="ceremony" data-index="11">
+            <div class="gallery-item__wrapper">
+              <div class="gallery-item__placeholder"></div>
+              <img
+                class="gallery-item__img"
+                data-src="/static/images/ceremony03.jpg"
+                alt="Wedding ceremony - Bride entry and procession"
+                loading="lazy"
+              />
+              <div class="gallery-item__overlay">
+                <div class="gallery-item__overlay-content">
+                  <span class="gallery-item__category">Ceremony</span>
+                  <h3 class="gallery-item__title">Grand Entry</h3>
+                  <button
+                    class="gallery-item__view-btn"
+                    aria-label="View fullscreen"
+                  >
+                    <i class="fas fa-expand"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Lightbox Modal -->
+      <div
+        class="lightbox"
+        id="lightbox"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Image gallery lightbox"
+      >
+        <button class="lightbox__close" aria-label="Close lightbox">
+          <span class="lightbox__close-line"></span>
+          <span class="lightbox__close-line"></span>
+        </button>
+
+        <button
+          class="lightbox__nav lightbox__nav--prev"
+          aria-label="Previous image"
+        >
+          <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <button
+          class="lightbox__nav lightbox__nav--next"
+          aria-label="Next image"
+        >
+          <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <div class="lightbox__container">
+          <div class="lightbox__image-wrapper">
+            <img class="lightbox__image" src="" alt="" />
+          </div>
+
+          <figcaption class="lightbox__caption">
+            <span class="lightbox__category"></span>
+            <h3 class="lightbox__title"></h3>
+          </figcaption>
+
+          <div class="lightbox__controls">
+            <button class="lightbox__control-btn" aria-label="Download image">
+              <i class="fas fa-download"></i>
+            </button>
+            <span class="lightbox__counter">1 / 12</span>
+            <button class="lightbox__control-btn" aria-label="Share image">
+              <i class="fas fa-share-alt"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="lightbox__background"></div>
+      </div>
+
+      <!-- Back to Top -->
+      <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+      </button>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>About Us</h3>
+          <p>
+            We are dedicated to providing excellent service and creating
+            memorable experiences for our clients.
+          </p>
+          <div class="social-links">
+            <a
+              href="https://www.instagram.com/parampara_wedding_planner_?igsh=cHQ5aGhhZnllb2pk"
+              title="Instagram"
+              aria-label="Follow us on Instagram"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a
+              href="https://wa.me/9510560421"
+              title="WhatsApp"
+              aria-label="Contact us on WhatsApp"
+            >
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('services') }}">Service</a></li>
+            <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+          <ul class="footer-links">
+            <li>
+              <a href="mailto:paramparaweddingplanner@gmail.com"
+                >paramparaweddingplanner@gmail.com</a
+              >
+            </li>
+            <li><a href="tel:+919510560421">+91 95105 60421</a></li>
+            <li><a href="tel:+917041203684">+91 70412 03684</a></li>
+            <li>
+              402, 4th floor, Atlantis Enclave, Gurukul Rd, Ahmedabad, India 380
+              052
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2022 Parampara Wedding Planner. All rights reserved.</p>
+        <a href="https://webvibestudios-gzc8.onrender.com/"
+          target="_blank"><p>Crafted By WebVibe Studios 🤍</p></a
+        >
+      </div>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+    <script src="/static/js/gallery.js"></script>
+  </body>
+</html>
+

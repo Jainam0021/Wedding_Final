@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Parampara Wedding Planner - Creating unforgettable traditional Indian weddings with elegance and perfection. Expert wedding planning, decoration, and venue management services."
+    />
+    <meta
+      name="keywords"
+      content="wedding planner, Indian wedding, traditional wedding, wedding decoration, venue management, Ahmedabad wedding planner"
+    />
+    <meta name="author" content="Parampara Wedding Planner" />
+    <title>
+      Parampara Wedding Planner - Traditional Elegance Meets Modern Luxury
+    </title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Quintessential&family=Cormorant+Garamond:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{{ url_for('static', filename='images/favicon.ico') }}"
+    />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="#" class="logo">
+          <img
+            src="/static/images/logo.png"
+            alt="Parampara Wedding Planner Logo"
+          />
+        </a>
+        <div class="menu-toggle" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="{{ url_for('index') }}">Home</a></li>
+          <li><a href="{{ url_for('about') }}">About</a></li>
+          <li><a href="{{ url_for('services') }}">Service</a></li>
+          <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+          <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="home">
+      <!-- Hero Section with Video Background -->
+      <section class="hero-section">
+        <div class="video-container">
+          <video autoplay muted loop playsinline class="hero-video">
+            <source src="/static/images/varmala.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="video-overlay"></div>
+        </div>
+
+        <div class="hero-content">
+          <h1 class="hero-title">Parampara Wedding Planner</h1>
+          <p class="hero-tagline">Where Tradition Meets Timeless Elegance</p>
+          <p class="hero-subtitle">
+            Crafting Dreams Into Unforgettable Celebrations
+          </p>
+          <a href="{{ url_for('contact') }}" class="cta-button">Plan Your Wedding</a>
+        </div>
+
+        <div class="scroll-indicator">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </section>
+
+      <!-- About Snapshot Section -->
+      <section class="about-snapshot" id="about-snapshot">
+        <div class="container">
+          <div class="section-header">
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <h2 class="section-title">Our Legacy</h2>
+            <div class="title-underline"></div>
+          </div>
+          <div class="about-content">
+            <p class="about-text">
+              Parampara Wedding Planner is where heritage meets contemporary
+              sophistication. With years of expertise in orchestrating
+              magnificent Indian weddings, we blend time-honored traditions with
+              modern luxury to create celebrations that resonate with your soul.
+              Our meticulous attention to detail and passion for perfection
+              ensures every moment of your special day is nothing short of
+              extraordinary.
+            </p>
+            <p class="about-text">
+              From intimate ceremonies to grand celebrations, we transform your
+              vision into reality with grace, elegance, and flawless execution.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Preview Section -->
+      <section class="services-preview" id="service">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Our Services</h2>
+            <div class="title-underline"></div>
+            <p class="section-subtitle">
+              Comprehensive Wedding Solutions Tailored For You
+            </p>
+          </div>
+
+          <div class="services-grid">
+            <article class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-clipboard-list"></i>
+              </div>
+              <h3 class="service-title">Wedding Planning</h3>
+              <p class="service-description">
+                Complete end-to-end planning with personalized attention to
+                every detail, ensuring a stress-free and memorable experience.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-person"></i>
+              </div>
+              <h3 class="service-title">Guest Management | RSVP</h3>
+              <p class="service-description">
+                We handle end-to-end guest coordination with smart RSVP
+                tracking, travel assistance, and accommodation planning.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-camera"></i>
+              </div>
+              <h3 class="service-title">Pre-Wedding</h3>
+              <p class="service-description">
+                Creative and cinematic pre-wedding photoshoots with professional
+                planning, styling, and stunning locations.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-hamburger"></i>
+              </div>
+              <h3 class="service-title">Food & Beverages Services</h3>
+              <p class="service-description">
+                Curated menus, premium catering, and beverage services tailored
+                to your taste, culture, and wedding theme.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-guitar"></i>
+              </div>
+              <h3 class="service-title">Artist Management & Entertainment</h3>
+              <p class="service-description">
+                From live bands and DJs to celebrity artists and cultural
+                performances, we manage complete entertainment planning.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-plane"></i>
+              </div>
+              <h3 class="service-title">Destination Wedding Planning</h3>
+              <p class="service-description">
+                Complete destination wedding solutions including venue
+                selection, logistics, décor, and guest experience—stress free
+                and elegant.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Parampara Section -->
+      <section class="why-choose">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Why Choose Parampara</h2>
+            <div class="title-underline"></div>
+            <p class="section-subtitle">Excellence in Every Detail</p>
+          </div>
+
+          <div class="why-grid">
+            <div class="why-card">
+              <div class="why-icon">
+                <i class="fas fa-heart"></i>
+              </div>
+              <h3 class="why-title">Personalized Approach</h3>
+              <p class="why-description">
+                Every wedding is unique. We listen, understand, and craft
+                experiences that truly reflect your vision and personality.
+              </p>
+            </div>
+
+            <div class="why-card">
+              <div class="why-icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <h3 class="why-title">Experienced Team</h3>
+              <p class="why-description">
+                Our dedicated professionals bring years of expertise and passion
+                to ensure flawless execution of your dream wedding.
+              </p>
+            </div>
+
+            <div class="why-card">
+              <div class="why-icon">
+                <i class="fas fa-balance-scale"></i>
+              </div>
+              <h3 class="why-title">Tradition Meets Innovation</h3>
+              <p class="why-description">
+                We honor cultural traditions while incorporating contemporary
+                trends to create timeless celebrations.
+              </p>
+            </div>
+
+            <div class="why-card">
+              <div class="why-icon">
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <h3 class="why-title">Stress-Free Execution</h3>
+              <p class="why-description">
+                From planning to the final moment, we handle every detail so you
+                can enjoy your special day worry-free.
+              </p>
+            </div>
+
+            <div class="why-card">
+              <div class="why-icon">
+                <i class="fas fa-gem"></i>
+              </div>
+              <h3 class="why-title">Premium Quality</h3>
+              <p class="why-description">
+                We partner with the finest vendors and use premium materials to
+                deliver luxury and elegance in every aspect.
+              </p>
+            </div>
+
+            <div class="why-card">
+              <div class="why-icon">
+                <i class="fas fa-handshake"></i>
+              </div>
+              <h3 class="why-title">Trust</h3>
+              <p class="why-description">
+                With Parampara, your celebration is in safe and experienced
+                hands. We prioritize transparency, reliability, and commitment
+                at every step.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Preview Section -->
+      <section class="gallery-preview">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Past Events</h2>
+            <div class="title-underline"></div>
+            <p class="section-subtitle">
+              Glimpses of Celebrations We've Crafted
+            </p>
+          </div>
+
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img
+                src="/static/images/img18.jpg"
+                alt="Traditional Indian Wedding Ceremony"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="gallery-item">
+              <img
+                src="/static/images/img16.jpg"
+                alt="Wedding Decoration Setup"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="gallery-item">
+              <img
+                src="/static/images/img07.jpg"
+                alt="Bride and Groom Photography"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="gallery-item">
+              <img
+                src="/static/images/img12.jpg"
+                alt="Wedding Venue Decoration"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="gallery-item">
+              <img
+                src="/static/images/img19.jpg"
+                alt="Traditional Wedding Rituals"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="gallery-item">
+              <img src="/static/images/ceremony03.jpg" alt="Wedding Reception Setup" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="gallery-cta">
+            <a href="{{ url_for('gallery') }}" class="secondary-button"
+              >View Full Gallery</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Client Reviews Section -->
+      <section class="client-reviews">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <div class="title-underline"></div>
+            <p class="section-subtitle">Testimonials from Happy Couples</p>
+          </div>
+
+          <div class="reviews-carousel">
+            <div class="reviews-wrapper">
+              <article class="review-card active">
+                <div class="review-stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="review-text">
+                  "Parampara made our dream wedding come true! Their attention
+                  to detail and professionalism exceeded our expectations. Every
+                  moment was perfectly orchestrated, and we couldn't have asked
+                  for a better team."
+                </p>
+                <div class="review-author">
+                  <h4 class="author-name">Priya & Arjun Sharma</h4>
+                  <p class="author-location">Ahmedabad</p>
+                </div>
+              </article>
+
+              <article class="review-card">
+                <div class="review-stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="review-text">
+                  "From start to finish, the team was incredible. They
+                  understood our vision and brought it to life beautifully. The
+                  traditional elements combined with modern elegance made our
+                  wedding absolutely magical!"
+                </p>
+                <div class="review-author">
+                  <h4 class="author-name">Neha & Rahul Patel</h4>
+                  <p class="author-location">Mumbai</p>
+                </div>
+              </article>
+
+              <article class="review-card">
+                <div class="review-stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="review-text">
+                  "Choosing Parampara was the best decision we made. They
+                  handled everything with such grace and efficiency. Our guests
+                  are still talking about how beautiful and well-organized our
+                  wedding was!"
+                </p>
+                <div class="review-author">
+                  <h4 class="author-name">Anjali & Vikram Mehta</h4>
+                  <p class="author-location">Surat</p>
+                </div>
+              </article>
+            </div>
+
+            <div class="carousel-controls">
+              <button class="carousel-btn prev" aria-label="Previous review">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <div class="carousel-dots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+              </div>
+              <button class="carousel-btn next" aria-label="Next review">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>About Us</h3>
+          <p>
+            We are dedicated to providing excellent service and creating
+            memorable experiences for our clients.
+          </p>
+          <div class="social-links">
+            <a
+              href="https://www.instagram.com/parampara_wedding_planner_?igsh=cHQ5aGhhZnllb2pk"
+              title="Instagram"
+              aria-label="Instagram"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a
+              href="https://wa.me/9510560421"
+              title="WhatsApp"
+              aria-label="WhatsApp"
+            >
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('services') }}">Service</a></li>
+            <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+          <ul class="footer-links">
+            <li>
+              <a href="mailto:paramparaweddingplanner@gmail.com"
+                >paramparaweddingplanner@gmail.com</a
+              >
+            </li>
+            <li><a href="tel:+919510560421">+91 9510560421</a></li>
+            <li><a href="tel:+917041203684">+91 7041203684</a></li>
+            <li>
+              402, 4th floor, Atlantis Enclave, Gurukul Rd, Ahmedabad, India 380
+              052
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2022 Parampara Wedding Planner. All rights reserved.</p>
+        <a href="https://webvibestudios-gzc8.onrender.com/"
+          ><p>Crafted By WebVibe Studios 🤍</p></a
+        >
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/static/js/script.js"></script>
+    <script>
+      function toggleMenu() {
+        const navLinks = document.getElementById("navLinks");
+        navLinks.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
