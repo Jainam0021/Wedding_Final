@@ -77,13 +77,9 @@ Description:
 {data.get('description')}
 """
         )
-        try:
-    mail.send(msg)
-    print("✅ EMAIL SENT")
-except Exception as e:
-    print("⚠️ EMAIL FAILED BUT REQUEST SAFE:", e)
-
+        mail.send(msg)
 return jsonify({"success": True}), 200
+
 
 
     except Exception as e:
