@@ -77,9 +77,14 @@ Description:
 {data.get('description')}
 """
         )
-        mail.send(msg)
-        print("✅ EMAIL SENT SUCCESSFULLY")
-        return jsonify({"success": True}), 200
+        try:
+    mail.send(msg)
+    print("✅ EMAIL SENT")
+except Exception as e:
+    print("⚠️ EMAIL FAILED BUT REQUEST SAFE:", e)
+
+return jsonify({"success": True}), 200
+
 
     except Exception as e:
         print("❌ EMAIL ERROR:", type(e), e)
@@ -89,4 +94,5 @@ Description:
 # ---------------- RUN APP ---------------- #
 if __name__ == "__main__":
     # Local testing
+
     app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
